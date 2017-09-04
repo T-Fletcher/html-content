@@ -1,622 +1,675 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Demo content - How are your styles?</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<title>Demo content - How are your styles?</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
+
 <body>
-    <aside>
-        <p>This test page was originally created by <a href="mailto:jkorpela@cs.tut.fi">Jukka Korpela</a> and updated by <a href="mailto:timfletcher88@gmail.com">Tim Fletcher</a> to include elements in various combinations, and remove elements that didn't make
-            it into the <a href="https://www.w3.org/TR/html5/">HTML 5 spec</a>.</p>
-        <p><strong>Please note:</strong></p>
-        <ul>
-            <li>It is aimed at demoing content you'd likely find in the main section of a HTML document, as an aide for quickly styling common content.</li>
-            <li>With the exception of <code>&lt;main&gt;</code> and <code>&lt;aside&gt;</code>, structural elements such as <code>&lt;header&gt;</code> and <code>&lt;section&gt;</code> have been omitted.</li>
-            <li>HTML 5 elements that are still classed as 'Experimental' have been omitted.</li>
-            <li>This page deliberately uses no style information so your browser's User Agent Stylesheet, or your own custom CSS, handles appearances.</li>
-            <li>A script is included that uses <a href="https://jquery.com/">jQuery</a> to auto-generate the Table of Contents below for ease of navigation.</li>
-            <li>The script also adds additional code to the DOM. To remove this, simply comment out/delete the script at the bottom of this document.</li>
-        </ul>
-        <p>List of elements taken from the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN network HTML element reference guide</a>.</p>
-    </aside>
-    <hr>
-    <main>
-        <h2>Headings</h2>
-        <h1>This is a 1st level heading</h1>
-        <p>This is a test paragraph.</p>
-        <h2>This is 2nd level heading</h2>
-        <p>This is a test paragraph.</p>
-        <h3>This is 3rd level heading</h3>
-        <p>This is a test paragraph.</p>
-        <h4>This is 4th level heading</h4>
-        <p>This is a test paragraph.</p>
-        <h5>This is 5th level heading</h5>
-        <p>This is a test paragraph.</p>
-        <h6>This is 6th level heading</h6>
-        <p>This is a test paragraph.</p>
-        <hr>
-        <h2>Navigation</h2>
-        <p>The following nested <code>&lt;a&gt;</code> tags inside a <code>&lt;nav&gt;</code> tag, separated by <code>&lt;br&gt;</code>s:</p>
-        <nav>
-            <a href="#">Menu items 1</a>
-            <br>
-            <a href="#">Menu items 2</a>
-            <br>
-            <a href="#">Menu items 3</a>
-        </nav>
-        <p>The following nested <code>&lt;a&gt;</code> tags inside a <code>&lt;li&gt;</code>, inside a <code>&lt;ul&gt;</code>, inside a <code>&lt;nav&gt;</code> tag:</p>
-        <nav>
-            <ul>
-                <li><a href="#">Menu items 1</a></li>
-                <li><a href="#">Menu items 2</a></li>
-                <li><a href="#">Menu items 3</a></li>
-            </ul>
-        </nav>
-        <hr>
-        <h2>Basic block level elements</h2>
-        <p>This is a normal paragraph (<code>&lt;p&gt;</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.</p>
-        <p>This is another paragraph, containing some <strong>strong text</strong> (<code>&lt;strong&gt;</code>) and <em>italicised text</em> (<code>&lt;em&gt;</code>).</p>
-        <div>This is a <code>&lt;div&gt;</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>&lt;div&gt;</code>.)</div>
-        <blockquote>
-            <p>This is a block quotation (<code>&lt;blockquote&gt;</code>) containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point.</p>
-        </blockquote>
-        <p>The following contains address information about the original author, in an <code>&lt;address&gt;</code> element.</p>
-        <address>
-        <p>Jukka Korpela,
-            <br>
-            <a href="mailto:jkorpela@cs.tut.fi">jkorpela@cs.tut.fi</a>
-            <br> P&auml;iv&auml;ns&auml;teenkuja 4 A, Espoo, Finland</p>
-    </address>
-        <hr>
-        <h2>Text-level markup</h2>
-        <p>NOTE: All examples below are wrapped in a <code>&lt;p&gt;</code> tag:</p>
-        <br>
-        <p>
-            <abbr title="Cascading Style Sheets">CSS</abbr> (an abbreviation; <code>&lt;abbr&gt;</code> markup used)</p>
-        <p><strong>Bolded</strong> (<code>&lt;strong&gt;</code> markup used)</p>
-        <p>
-            <cite>Origin of Species</cite> (a book title; <code>&lt;cite&gt;</code> markup used)</p>
-        <p>This is a timestamp using the <code>&lt;time&gt;</code> element with the <code>timedate</code> attribute:
-            <time datetime="2000-09-15T00:00">15 September 2000</time>.</p>
-        <p><code>&lt;a[i] = b[i] + c[i);&gt;</code> (computer code; <code>&lt;code&gt;</code> markup used)</p>
-        <p>Here we have some
-            <del>deleted</del> text (<code>&lt;del&gt;</code> markup used), to indicate edits</p>
-        <p>This is a
-            <dfn>definition tag</dfn> (<code>&lt;dfn&gt;</code>), where <code>&lt;dfn&gt;</code> is the markup used for the term being defined</p>
-        <p>This is <em>very</em> simple (<code>&lt;em&gt;</code> markup used for emphasizing a word)</p>
-        <p>Some words live in books called <i>Dictionaries</i>, but their use doesn't stress the point (should appear in italics; <code>&lt;i&gt;</code> markup used)</p>
-        <p>Here we have some
-            <ins>inserted</ins> text (<code>&lt;ins&gt;</code> markup used), to indicate edits</p>
-        <p>Type
-            <kbd>yes</kbd> when prompted for an answer (<code>&lt;kbd&gt;</code> markup used for text indicating keyboard input)</p>
-        <p>
-            <q>Hello!</q> (<code>&lt;q&gt;</code> markup used for quotation)</p>
-        <p>He said:
-            <q>She said
-            <q>Hello!</q>
-            </q> (a quotation inside a quotation)</p>
-        <p>You may get the message
-            <samp>Core dumped</samp> at times ( <code>&lt;samp&gt;</code> markup used for sample output)</p>
-        <p>Subscripts and Superscripts (<code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> markup) work inside running text. Now subscripts: M<sub>lle</sub>, 1<sub>st</sub>, and then some mathematical notations: e<sup>x</sup>, sin<sup>2</sup> <i>x</i>,
-            and some nested superscripts (exponents) too: e <sup>x<sup>2</sup></sup> and f(x)<sup>g(x)<sup>a+b+c</sup></sup> (where 2 and a+b+c should appear as exponents of exponents).</p>
-        <p><u>Underlined</u> text (<code>&lt;u&gt;</code> markup used)</p>
-        <p>The command <code>&lt;cat&gt;</code>
-            <var>filename</var> displays the file specified by the
-            <var>filename</var> (<code>&lt;var&gt;</code> markup used to indicate a word as a variable).</p>
-        <p><code>This is sample text inside code markup</code> (<code>&lt;code&gt;</code>)</p>
-        <p>
-            <kbd>This is sample text inside kbd markup</kbd> (<code>&lt;kbd&gt;</code>)
-        </p>
-        <p>
-            <samp>This is sample text inside samp markup</samp> (<code>&lt;samp&gt;</code>)
-        </p>
-        <p>Here is some <pre>preformatted</pre> text, using a <code>&lt;pre&gt;</code> tag</p>
-        <p>Here is some
-            <data value="398">data</data>, where a value is assigned to the tag contents via a <code>&lt;data&gt;</code> tag</p>
-        <p>This text contains a string
-            <mark>that has been marked</mark>, using a <code>&lt;mark&gt;</code> tag</p>
-        <p>Here's some text that has been <small>made smaller</small>, using the <code>&lt;small&gt;</code> tag. This is used for side comments, legal print and copyright text</p>
-        <p>Below is a <code>&lt;hr&gt;</code></p>
-        <hr>
-        <h2>Anchors</h2>
-        <p><a href="../index.html">Regular link to a page</a></p>
-        <p><a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.pdf" title="This is a title" type="application/pdf">PDF link with a title and type attribute assigned</a>, which links to a PDF and has a title attribute</p>
-        <p><a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.doc">Word link</a>, which links to a Word document</p>
-        <p><a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.xlsx" title="This is a title">Excel link with a title</a>, which links to an Excel document</p>
-        <p><a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.img">Image</a>, which links to an image</p>
-        <p><a id="link">Plain anchor with an ID</a>, </p>
-        <p>This is a text paragraph that contains some inline links (<code>&lt;a&gt;</code>). Generally, inline links (as opposite to e.g. links lists) are problematic from the <a href="http://www.useit.com">usability</a> perspective, but they may have use
-            as “incidental”, less relevant links. See the document
-            <cite><a href="links.html">Links Want To Be Links</a></cite>.</p>
-        <hr>
-        <h2>Lists</h2>
-        <p>This is a paragraph before an <strong>unnumbered</strong> list (<code>&lt;ul&gt;</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically
-            related to a list, e.g. as a "list header".</p>
-        <ul>
-            <li>One.</li>
-            <li>Two.</li>
-            <li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
-            <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
-        </ul>
-        <h3>Unordered lists</h3>
-        <p>Here's another one</p>
-        <ul>
-            <li>One.</li>
-            <li>Two.</li>
-            <li>This is a nested <code>&lt;ul&gt;</code> list:
-                <ul>
-                    <li>One.</li>
-                    <li>Two.</li>
-                    <li>This is a nested <code>&lt;ul&gt;</code> list:
-                        <ul>
-                            <li>One.</li>
-                            <li>Two.</li>
-                            <li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
-                            <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
-                        </ul>
-                    </li>
-                    <li>Four</li>
-                </ul>
-            </li>
-            <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
-        </ul>
-        <h3>Ordered lists with nested lists</h3>
-        <p>This is a paragraph before a <strong>numbered</strong> list (<code>&lt;ol&gt;</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically
-            related to a list, e.g. as a "list header".</p>
-        <ol>
-            <li>One.</li>
-            <li>Two.</li>
-            <li>Below is a nested <code>&lt;ol&gt;</code> list set to display capital letters rather than numbers:
-                <ol type="A">
-                    <li>One.</li>
-                    <li>Two.</li>
-                    <li>Three. Well, probably this list item should be longer. Note that if items are short, lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
-                    <li>This nested <code>&lt;ol&gt;</code> is set to show Roman numerals.
-                        <ol type="i">
-                            <li>One.</li>
-                            <li>Two.</li>
-                            <li>Three. Well, probably this list item should be longer. Note that if items are short, lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
-                            <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
-                        </ol>
-                    </li>
-                </ol>
-            </li>
-            <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
-        </ol>
-        <h3>Definition lists</h3>
-        <p>This is a paragraph before a <strong>Definition</strong> list (<code>&lt;dl&gt;</code>). In principle, such a list should consist of <em>terms</em> and associated definitions. But many authors use <code>&lt;dl&gt;</code> elements for fancy "layout"
-            things. Usually the effect is not <em>too</em> bad, if you design user style sheet rules for <code>&lt;dl&gt;</code> which are suitable for real definition lists. </p>
-        <dl>
-            <dt>This is the <code>&lt;dt&gt;</code> element</dt>
-            <dd>This is the <code>&lt;dd&gt;</code> element</dd>
-            <dt>recursion, indirect</dt>
-            <dd>see indirect recursion</dd>
-            <dt>indirect recursion</dt>
-            <dd>see recursion, indirect</dd>
-            <dt>term</dt>
-            <dd>a word or other expression taken into specific use in a well-defined meaning, which is often defined rather rigorously, even formally, and may differ quite a lot from an everyday meaning</dd>
-        </dl>
-        <hr>
-        <h2>Forms</h2>
-        <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
-            <p>This is a form (<code>&lt;form&gt;</code>) containing various fields (with some initial values (defaults) set, so that you can see how input text looks like without actually typing it).</p>
-            <p>Below is a hidden field</p>
-            <input type="hidden" name="hidden field" value="42">
-            <label for="but">Button (<code>&lt;button&gt;</code>) followed by a <code>&lt;br&gt;</code> tag, all wrapped in a <code>&lt;label&gt;</code> tag:
-            <button id="but" type="submit" name="foo" value="bar">A cool button</button>
-        </label>
-            <br>
-            <label for="f0">Reset button:
-            <input id="f0" type="reset" name="reset" value="Reset">
-            </label>
-            <div>
-                <p>This field and label are inside a <code>&lt;div&gt;</code></p>
-                <label for="f1">Single-line text input field (<code>&lt;input&gt;</code>): 
-                <input id="f1" name="text" size="20" value="Default text">
-            </label>
-            </div>
-            <label for="f2">Multi-line text input field (<code>&lt;textarea&gt;</code>):</label>
-            <br>
-
-            <textarea id="f2" name="textarea" rows="2" cols="20"> Default text.
-        </textarea>
-            <p>The following two radio buttons are inside a <code>&lt;fieldset&gt;</code> element with a <code>&lt;legend&gt;</code>:</p>
-            <fieldset>
-                <legend>Legend</legend>
-                <div>
-                    <label for="f3">
-                    <input id="f3" type="radio" name="radio" value="1"> Radio button 1</label>
-                </div>
-                <div>
-                    <label for="f4">
-                    <input id="f4" type="radio" name="radio" value="2" checked=""> Radio button 2 (initially checked)</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Check those that apply</legend>
-                <div>
-                    <label for="f5">
-                    <input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label>
-                </div>
-                <div>
-                    <label for="f6">
-                    <input id="f6" type="checkbox" name="checkbox2" checked=""> Checkbox 2 (initially checked)</label>
-                </div>
-            </fieldset>
-            <div>
-                <label for="f10">A <code>&lt;select&gt;</code> element with the <code>size</code> attribute set (dropdown box):
-                <select id="f10" name="select1" size="1">
-                    <option>one </option>
-                    <option selected="">two (default) </option>
-                    <option>three </option>
-                </select>
-            </label>
-            </div>
-            <div>
-                <label for="f11">A <code>&lt;select&gt;</code> element with <code>&lt;optgroup&gt;</code> grouping the <code>&lt;option&gt;</code>s (dropdown box):
-                <select id="f11" name="select1" size="1">
-                    <optgroup label="Option group 1">
-                        <option>one</option>
-                        <option selected="">two (default) </option>
-                        <option>three </option>
-                    </optgroup>
-                    <optgroup label="Option group 2">
-                        <option>one</option>
-                        <option>two</option>
-                        <option>three </option>
-                    </optgroup>
-                </select>
-            </label>
-            </div>
-            <div>
-                <label for="f12">A <code>&lt;select&gt;</code> element with the <code>size</code> attribute set (listbox): </label>
-                <br>
-                <select id="f12" name="select2" size="3">
-                <option>one</option>
-                <option selected="">two (default)</option>
-                <option>three</option>
-            </select>
-            </div>
-            <div>
-                <label for="f99">Submit button (as <code>&lt;input&gt;</code>, not <code>&lt;button&gt;</code>):
-                <input id="f99" type="submit" name="submit" value="Just a test">
-            </label>
-            </div>
-            <div>
-                <p>Below is a <code>&lt;meter&gt;</code> showing a value in relation to a given range. In this case, 84 is the value, the range is 64-100, and 80 is considered high</p>
-                <p>He got a
-                    <meter low="69" high="80" max="100" value="84">B</meter> on the exam.</p>
-                <p>Below is a <code>&lt;meter&gt;</code> showing a value in relation to a given range. In this case, 75 is the value, the range is 64-100, and 80 is considered high</p>
-                <p>He got a
-                    <meter low="69" high="80" max="100" value="75">B</meter> on the exam.</p>
-                <p>Below is a <code>&lt;meter&gt;</code> showing a value in relation to a given range. In this case, 50 is the value, the range is 64-100, and 80 is considered high</p>
-                <p>He got a
-                    <meter low="69" high="80" max="100" value="50">B</meter> on the exam.</p>
-                <p>Below is a <code>&lt;meter&gt;</code> showing a value in relation to a given range. In this case, 15 is the value, the range is 64-100, and 80 is considered high</p>
-                <p>He got a
-                    <meter low="69" high="80" max="100" value="15">B</meter> on the exam.</p>
-            </div>
-            <div>
-                <p>Below is a <code>&lt;datalist&gt;</code> tag, which allows you to define <code>&lt;option&gt;</code>s for a list. In this case, a text input field is referencing a datalist containing browser names</p>
-                <label>Choose a browser from this list:
-                <input list="browsers" name="myBrowser" />
-            </label>
-                <datalist id="browsers">
-                <option value="Chrome"></option>
-                <option value="Firefox"></option>
-                <option value="Internet Explorer"></option>
-                <option value="Opera"></option>
-                <option value="Safari"></option>
-                <option value="Microsoft Edge"></option>
-            </datalist>
-            </div>
-        </form>
-        <hr>
-        <h2>Tables</h2>
-        <p>The following <code>&lt;table&gt;</code> has a <code>&lt;caption&gt;</code>. The first row (<code>&lt;tr&gt;</code>) and the first column contain table header cells (<code>&lt;th&gt;</code>) only; other cells are data cells (<code>&lt;td&gt;</code> elements)</p>
-        <table>
-            <caption>Sample table: Areas of the Nordic countries, in sq km</caption>
-            <tbody>
-                <tr>
-                    <th scope="col">Country</th>
-                    <th scope="col">Total area</th>
-                    <th scope="col">Land area</th>
-                </tr>
-                <tr>
-                    <th>Denmark</th>
-                    <td>43,070</td>
-                    <td>42,370</td>
-                </tr>
-                <tr>
-                    <th>Finland</th>
-                    <td>337,030</td>
-                    <td>305,470</td>
-                </tr>
-                <tr>
-                    <th>Iceland</th>
-                    <td>103,000</td>
-                    <td>100,250</td>
-                </tr>
-                <tr>
-                    <th>Norway</th>
-                    <td>324,220</td>
-                    <td>307,860</td>
-                </tr>
-                <tr>
-                    <th>Sweden</th>
-                    <td>449,964</td>
-                    <td>410,928</td>
-                </tr>
-            </tbody>
-        </table>
-        <p>The following table uses all <code>&lt;table&gt;</code> elements, including <code>header</code> attributes that let you define which <code>&lt;th&gt;</code>s relate to which <code>&lt;td&gt;</code>s when there are multiple <code>&lt;th&gt;</code> levels</p>
-        <table>
-            <caption>This is the table's caption</caption>
-            <thead>
-                <tr>
-                    <th scope="col" id="hcg1" colspan="3">Header column Group 1</th>
-                    <th scope="col" id="hcg2" colspan="2">Header column Group 2</th>
-                </tr>
-                <tr>
-                    <th scope="col" id="hcg1-1">Country</th>
-                    <th scope="col" id="hcg1-2">Total area</th>
-                    <th scope="col" id="hcg1-3">Land area</th>
-                    <th scope="col" id="hcg2-1">More area</th>
-                    <th scope="col" id="hcg2-2">Final area</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td headers="hcg1 hcg1-1">Denmark</td>
-                    <td headers="hcg1 hcg1-2">43,070</td>
-                    <td colspan="3" headers="hcg1 hcg1-3">This cell uses <code>&lt;colspan&gt;</code> to span 3 columns</td>
-                </tr>
-                <tr>
-                    <td headers="hcg1 hcg1-1">Finland</td>
-                    <td headers="hcg1 hcg1-2">337,030</td>
-                    <td headers="hcg1 hcg1-3">305,470</td>
-                    <td headers="hcg2 hcg2-1">42,370</td>
-                    <td headers="hcg2 hcg2-2">42,370</td>
-                </tr>
-                <tr>
-                    <td headers="hcg1 hcg1-1">Iceland</td>
-                    <td headers="hcg1 hcg1-2">103,000</td>
-                    <td rowspan="2" headers="hcg1 hcg1-3">This cell uses <code>&lt;rowspan&gt;</code> to span 2 rows</td>
-                    <td headers="hcg2 hcg2-1">42,370</td>
-                    <td headers="hcg2 hcg2-2">42,370</td>
-                </tr>
-                <tr>
-                    <td headers="hcg1 hcg1-1">Norway</td>
-                    <td headers="hcg1 hcg1-2">324,220</td>
-                    <td headers="hcg2 hcg2-1">307,860</td>
-                    <td headers="hcg2 hcg2-2">307,860</td>
-                </tr>
-                <tr>
-                    <td headers="hcg1 hcg1-1">Sweden</td>
-                    <td headers="hcg1 hcg1-2">449,964</td>
-                    <td headers="hcg1 hcg1-3">410,928</td>
-                    <td headers="hcg2 hcg2-1">42,370</td>
-                    <td headers="hcg2 hcg2-2">42,370</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td headers="hcg1 hcg1-1">this group of cells is wrapped in a <code>&lt;tfoot&gt;</code> tag</td>
-                    <td headers="hcg1 hcg1-2">Total of column 1</td>
-                    <td headers="hcg1 hcg1-3">Total of column 2</td>
-                    <td headers="hcg2 hcg2-1">Total of column 2</td>
-                    <td headers="hcg2 hcg2-2">Total of column 2</td>
-                </tr>
-            </tfoot>
-        </table>
-        <hr>
-        <h2>Figures</h2>
-        <p>A <code>&lt;figure&gt;</code> on its own</p>
-        <figure>
-            <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
-        </figure>
-        <p>A <code>&lt;figure&gt;</code> with <code>&lt;figcaption&gt;</code></p>
-        <figure>
-            <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
-            <figcaption>Fig1. MDN Logo</figcaption>
-        </figure>
-        <hr>
-        <h2>Character test</h2>
-        <p>The following <code>&lt;table&gt;</code> has some sample characters with annotations. If the browser’s default font does not contain all of them, they may get displayed using backup fonts. This may cause stylistic differences, but it should not prevent the characters from being displayed at all.</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Char.</th>
-                    <th>Explanation</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>&ecirc;</td>
-                    <td>e with circumflex</td>
-                    <td>Latin 1 character, should be ok</td>
-                </tr>
-                <tr>
-                    <td>&mdash;</td>
-                    <td>em dash</td>
-                    <td>Windows Latin 1 character, should be ok, too</td>
-                </tr>
-                <tr>
-                    <td>&Amacr;</td>
-                    <td>A with macron (line above)</td>
-                    <td>Latin Extended-A character, not present in all fonts</td>
-                </tr>
-                <tr>
-                    <td>&Omega;</td>
-                    <td>capital omega</td>
-                    <td>A Greek letter</td>
-                </tr>
-                <tr>
-                    <td>&minus;</td>
-                    <td>minus sign</td>
-                    <td>Unicode minus</td>
-                </tr>
-                <tr>
-                    <td>&#216;</td>
-                    <td>diameter sign</td>
-                    <td>relatively rare in fonts</td>
-                </tr>
-            </tbody>
-        </table>
-        <hr>
-        <h2>Hyphenation</h2>
-        <p>Resize you browser window to trigger some hyphenation in the text below, depending on support to various methods of hyphenation.</p>
-        <h3>CSS-based hyphenation</h3>
-        <p class="limited hyphens">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors. </p>
-        <h3>JavaScript-driven hyphenation</h3>
-        <p class="limited hyphenate">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors. </p>
-        <h3>Explicit hyphenation hints (soft hyphens)</h3>
-        <p class="limited">Un&shy;til re&shy;cent&shy;ly the great ma&shy;jor&shy;i&shy;ty of nat&shy;u&shy;ral&shy;ists be&shy;lieved that spe&shy;cies were im&shy;mu&shy;ta&shy;ble pro&shy;duc&shy;tions, and had been sep&shy;a&shy;rate&shy;ly cre&shy;at&shy;ed. This view
-            has been ably main&shy;tain&shy;ed by many au&shy;thors. </p>
-        <hr>
-        <h2>Multimedia</h2>
-        <h3>Images</h3>
-        <p>Below is a test <code>&lt;img&gt;</code> inside a <code>&lt;p&gt;</code> tag:</p>
-        <p><img src="http://lh3.googleusercontent.com/FGUReKv4ABK_Df1HH4RGhtkFXQgrg8SV9HhjlTpOUWXOdFl-gqUyITUg2SLWXjoaur7Vd3FWNMu0nCx8nzk59xKiULIZKm2LJjgvpbTs" alt="A test image from Google" width="500" height="228"></p>
-        <p>Below is a broken <code>&lt;image&gt;</code> inside a <code>&lt;p&gt;</code> tag:</p>
-        <p><img src="/nopath" alt="This image's path is deliberately broken"></p>
-        <h3>Audio</h3>
-        <p>Below is an <code>&lt;audio&gt;</code> tag</p>
-        <audio src="/media/audio.oga" loop controls></audio>
-        <p>Below is a <code>&lt;map&gt;</code> tag, containing <code>&lt;area&gt;</code> tags to define locations. Hover over the image to see the destination path change</p>
-        <map name="primary">
-        <area shape="circle" coords="75,75,75" href="left.html" alt="left alt text">
-        <area shape="circle" coords="275,75,75" href="right.html" alt="right alt text">
-    </map>
-        <img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic">
-        <p>Below is an <code>&lt;audio&gt;</code> tag with Legacy support. It contains <code>&lt;source&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;p&gt;</code> and <code>&lt;a&gt;</code> tags</p>
-        <audio loop controls>
-        <source src="/media/audio.oga">
-        <source src="/media/audio.wav">
-        <object type="audio/x-wav" data="/media/audio.wav" width="290" height="45">
-            <param name="src" value="/media/audio.wav">
-            <param name="autoplay" value="false">
-            <param name="autoStart" value="0">
-            <p><a href="/media/audio.wav">Download this audio file.</a></p>
-        </object>
-    </audio>
-        <p>Below is a <code>&lt;video&gt;</code> tag</p>
-        <video src="video/play.mp4" loop controls poster="/images/video.png"></video>
-        <p>Below is a <code>&lt;video&gt;</code> tag with Legacy support. It contains <code>&lt;source&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;p&gt;</code> and <code>&lt;a&gt;</code> tags</p>
-        <video loop controls>
-        <source src="/media/video.oga">
-        <source src="/media/video.m4v">
-        <object type="video/ogg" data="/media/video.oga" width="320" height="240">
-            <param name="src" value="/media/video.oga">
-            <param name="autoplay" value="false">
-            <param name="autoStart" value="0">
-            <p><a href="/media/video.oga">Download this video file.</a></p>
-        </object>
-    </video>
-        <hr>
-        <h2>Scripting</h2>
-        <p>Below is a <code>&lt;noscript&gt;</code> tag, which will only display if your browser either doesn't support the script type, or has scripts disabled</p>
-        <noscript>
-        <p>If you can see this, scripts are disabled!</p>
-    </noscript>
-        <h3>Canvas</h3>
-        <p>Below is a <code>&lt;canvas&gt;</code> tag containing alternative text</p>
-        <canvas id="canvas" width="300" height="300">
-        An alternative text describing what your canvas displays.
-    </canvas>
-        <hr>
-        <h2>Interactive elements</h2>
-        <p>Below is a <code>&lt;details&gt;</code> tag containing a <code>&lt;summary&gt;</code></p>
-        <details>
-            <summary>Some details</summary>
-            <p>More info about the details.</p>
-        </details>
-        <p>Below is an open <code>&lt;details&gt;</code> tag containing a <code>&lt;summary&gt;</code></p>
-        <details open>
-            <summary>Even more details</summary>
-            <p>Here are even more details about the details.</p>
-        </details>
-        <p>Below is a <code>&lt;dialog&gt;</code> tag containing a <code>&lt;p&gt;</code> tag</p>
-        <dialog open>
-            <p>Greetings, one and all!</p>
-        </dialog>
-    </main>
-    <hr>
-    <p id="reference"><small>This page's Source code is <a href="https://validator.w3.org">Valid HTML</a> as of <time datetime="2017-07-12T11:52">12 July 2017</time>.<br>
-    Additional code added to the DOM by scripts may not be valid.<br>
-    Date of creation: <time datetime="2000-09-15T00:00">15 September 2000</time>.<br>
-    Last update: <time datetime="2017-07-10T00:00">10 July 2017</time>.</small></p>
-
-    <script type="text/javascript">
-        $('aside').after('<h2 id="navigation">Topics</h2>\n<nav id="nav-menu"><ul></ul></nav>\n<hr><br><br>');
-
-        // Get list of all <h2>s
-        // Add IDs to all H2s based on text within
-        $('h2:not(#navigation)').each(function() {
-            var $this = $(this),
-                $text = $this.text();
-
-            $this.attr('id', function() {
-                return $text.replace(/\ +/g, '-').toLowerCase();
-            });
-
-            // Reassemble into menu
-            $('#nav-menu ul').append('<li><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
-        });
-
-        $('nav').first().after('<h2 id="elements">HTML elements referenced on this page</h2>\n<p>Click an element to view the first unique instance of it on this page</p>\n<nav><ul id="elements-nav"></ul></nav>');
+	<aside>
+		<p>This test page was originally created by <a href="mailto:jkorpela@cs.tut.fi">Jukka Korpela</a> and updated by <a href="mailto:timfletcher88@gmail.com">Tim Fletcher</a> to include elements in various combinations, and remove elements that didn't make it into the <a href="https://www.w3.org/TR/html5/">HTML 5 spec</a>.</p>
+		<p><strong>Please note:</strong></p>
+		<ul>
+			<li>It is aimed at demoing content you'd likely find in the main section of a HTML document, as an aide for quickly styling common content.</li>
+			<li>With the exception of <code>&lt;main&gt;</code> and <code>&lt;aside&gt;</code>, structural elements such as <code>&lt;header&gt;</code> and <code>&lt;section&gt;</code> have been omitted.</li>
+			<li>HTML 5 elements that are still classed as 'Experimental' have been omitted.</li>
+			<li>This page deliberately uses no style information so your browser's User Agent Stylesheet, or your own custom CSS, handles appearances.</li>
+			<li>A script is included that uses <a href="https://jquery.com/">jQuery</a> to auto-generate the Table of Contents below for ease of navigation.</li>
+			<li>The script also adds additional code to the DOM. To remove this, simply comment out/delete the script at the bottom of this document.</li>
+		</ul>
+		<p>List of elements taken from the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN network HTML element reference guide</a>.</p>
+	</aside>
+	<hr>
+	<main>
+		<h2>Headings</h2>
+		<h1>This is a 1st level heading</h1>
+		<p>This is a test paragraph.</p>
+		<h2>This is 2nd level heading</h2>
+		<p>This is a test paragraph.</p>
+		<h3>This is 3rd level heading</h3>
+		<p>This is a test paragraph.</p>
+		<h4>This is 4th level heading</h4>
+		<p>This is a test paragraph.</p>
+		<h5>This is 5th level heading</h5>
+		<p>This is a test paragraph.</p>
+		<h6>This is 6th level heading</h6>
+		<p>This is a test paragraph.</p>
+		<hr>
+		
 
 
-        var elements = [];
 
-        // Get list of all HTML elements
-        // Target all <code> usage EXCEPT where it's been used to demonstrate the <code> tag itself
-        $('code:contains("<"):not(:contains("[")):not(:contains("This is sample text inside code markup"))').each(function() {
-            var $this = $(this),
-                $text = $this.text().replace('&lt;', '').replace('&gt;', '').replace('<', '').replace('>', ''),
-                $origID = $text,
-                $id = $text,
-                count = 0;
+		<h2>Navigation</h2>
+		<p>The following nested <code>&lt;a&gt;</code> tags inside a <code>&lt;nav&gt;</code> tag, separated by <code>&lt;br&gt;</code>s:</p>
+		<nav>
+			<a href="#">Menu items 1</a>
+			<br>
+			<a href="#">Menu items 2</a>
+			<br>
+			<a href="#">Menu items 3</a>
+		</nav>
+		<p>The following nested <code>&lt;a&gt;</code> tags inside a <code>&lt;li&gt;</code>, inside a <code>&lt;ul&gt;</code>, inside a <code>&lt;nav&gt;</code> tag:</p>
+		<nav>
+			<ul>
+				<li><a href="#">Menu items 1</a></li>
+				<li><a href="#">Menu items 2</a></li>
+				<li><a href="#">Menu items 3</a></li>
+			</ul>
+		</nav>
+		<hr>
+		
 
-            // If another element already has this ID, append a numbber, then recheck for that ID until it is unique
-            while ($('#' + $id).length) {
-                count++
-                $id = $id + count;
-            }
 
-            // Apply IDs to each element
-            $this.attr('id', $id.replace(/\ +/g, '-').toLowerCase());
 
-            // Populate the array with the original ID for our fragment links later
-            elements.push($origID);
+		<h2>Basic block level elements</h2>
+		<p>This is a normal paragraph (<code>&lt;p&gt;</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.</p>
+		<p>This is another paragraph, containing some <strong>strong text</strong> (<code>&lt;strong&gt;</code>) and <em>italicised text</em> (<code>&lt;em&gt;</code>).</p>
+		<div>This is a <code>&lt;div&gt;</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>&lt;div&gt;</code>.)</div>
+		<blockquote>
+			<p>This is a block quotation (<code>&lt;blockquote&gt;</code>) containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point.</p>
+		</blockquote>
+		<p>The following contains address information about the original author, in an <code>&lt;address&gt;</code> element.</p>
+		<address>
+			<p>Jukka Korpela,
+				<br>
+				<a href="mailto:jkorpela@cs.tut.fi">jkorpela@cs.tut.fi</a>
+				<br> P&auml;iv&auml;ns&auml;teenkuja 4 A, Espoo, Finland</p>
+		</address>
+		<hr>
+		
 
-            // Auto-generate links to MDN page
-            $this.wrap('<a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/' + $origID + '"></a>');
-        });
 
-        // Strip duplicate items and sort alphabetically
-        elements = $.unique(elements).sort();
 
-        // For each link, generate 
-        for (var i = 0; i < elements.length; i++) {
-            $('#elements-nav').append('<li><a href="#' + elements[i] + '">' + elements[i] + '</a></li>');
-        }
+		<h2>Text-level markup</h2>
+		<p>NOTE: All examples below are wrapped in a <code>&lt;p&gt;</code> tag:</p>
+		<br>
+		<p>
+			<abbr title="Cascading Style Sheets">CSS</abbr> (an abbreviation; <code>&lt;abbr&gt;</code> markup used)</p>
+		<p><strong>Bolded</strong> (<code>&lt;strong&gt;</code> markup used)</p>
+		<p>
+			<cite>Origin of Species</cite> (a book title; <code>&lt;cite&gt;</code> markup used)</p>
+		<p>This is a timestamp using the <code>&lt;time&gt;</code> element with the <code>timedate</code> attribute:
+			<time datetime="2000-09-15T00:00">15 September 2000</time>.</p>
+		<p><code>&lt;a[i] = b[i] + c[i);&gt;</code> (computer code; <code>&lt;code&gt;</code> markup used)</p>
+		<p>Here we have some
+			<del>deleted</del> text (<code>&lt;del&gt;</code> markup used), to indicate edits</p>
+		<p>This is a
+			<dfn>definition tag</dfn> (<code>&lt;dfn&gt;</code>), where <code>&lt;dfn&gt;</code> is the markup used for the term being defined</p>
+		<p>This is <em>very</em> simple (<code>&lt;em&gt;</code> markup used for emphasizing a word)</p>
+		<p>Some words live in books called <i>Dictionaries</i>, but their use doesn't stress the point (should appear in italics; <code>&lt;i&gt;</code> markup used)</p>
+		<p>Here we have some
+			<ins>inserted</ins> text (<code>&lt;ins&gt;</code> markup used), to indicate edits</p>
+		<p>Type
+			<kbd>yes</kbd> when prompted for an answer (<code>&lt;kbd&gt;</code> markup used for text indicating keyboard input)</p>
+		<p><q>Hello!</q> (<code>&lt;q&gt;</code> markup used for quotation)</p>
+		<p>He said:
+			<q>She said
+				<q>Hello!</q>
+			</q>(a quotation inside a quotation)</p>
+		<p>You may get the message
+			<samp>Core dumped</samp> at times ( <code>&lt;samp&gt;</code> markup used for sample output)</p>
+		<p>Subscripts and Superscripts (<code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> markup) work inside running text. Now subscripts: M<sub>lle</sub>, 1<sub>st</sub>, and then some mathematical notations: e<sup>x</sup>, sin<sup>2</sup> <i>x</i>, and some nested superscripts (exponents) too: e <sup>x<sup>2</sup></sup> and f(x)<sup>g(x)<sup>a+b+c</sup></sup> (where 2 and a+b+c should appear as exponents of exponents).</p>
+		<p><u>Underlined</u> text (<code>&lt;u&gt;</code> markup used)</p>
+		<p>The command <code>&lt;cat&gt;</code>
+			<var>filename</var> displays the file specified by the
+			<var>filename</var> (<code>&lt;var&gt;</code> markup used to indicate a word as a variable).</p>
+		<p><code>This is sample text inside code markup</code> (<code>&lt;code&gt;</code>)</p>
+		<kbd>This is sample text inside kbd markup</kbd> (<code>&lt;kbd&gt;</code>)
+		<p><samp>This is sample text inside samp markup</samp> (<code>&lt;samp&gt;</code>)</p>
+		<pre>Here is some preformatted</pre> text, using a <code>&lt;pre&gt;</code> tag
+		<p>Here is some <data value="398">data</data>, where a value is assigned to the tag contents via a <code>&lt;data&gt;</code> tag</p>
+		<p>This text contains a string <mark>that has been marked</mark>, using a <code>&lt;mark&gt;</code> tag</p>
+		<p>Here's some text that has been <small>made smaller</small>, using the <code>&lt;small&gt;</code> tag. This is used for side comments, legal print and copyright text</p>
+		<p>Below is a <code>&lt;hr&gt;</code></p>
+		<hr>
+		
 
-        // Make all these nav elements toggle-able
-        $('#nav').before('<form id="controls">\n<label for="sections">Show Sections</label>\n<input id="sections" name="sections" type="checkbox"><br>\n<label for="tags">Show Tags</label>\n<input id="tags" name="tags" type="checkbox">\n</form>');
 
-// TODO: Add toggle visibility options for Nav aids
 
-       /* 
-       $('#controls #sections').on('click', function() {
+		<h2>Anchors</h2>
+		<p><a href="../index.html">Regular link to a page</a></p>
+		<p><a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.pdf" title="This is a title" type="application/pdf">PDF link with a title and type attribute assigned</a>, which links to a PDF and has a title attribute</p>
+		<p><a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.doc">Word link</a>, which links to a Word document</p>
+		<p><a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.xlsx" title="This is a title">Excel link with a title</a>, which links to an Excel document</p>
+		<p><a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.img">Image</a>, which links to an image</p>
+		<p><a id="link">Plain anchor with an ID</a>, </p>
+		<p>This is a text paragraph that contains some inline links (<code>&lt;a&gt;</code>). Generally, inline links (as opposite to e.g. links lists) are problematic from the <a href="http://www.useit.com">usability</a> perspective, but they may have use as “incidental”, less relevant links. See the document
+			<cite><a href="links.html">Links Want To Be Links</a></cite>.</p>
+		<hr>
+		
 
-        });
-        $('#controls #tags').on('click', function() {
 
-        });
-       */
-    </script>
+
+		<h2>Lists</h2>
+		<p>This is a paragraph before an <strong>unnumbered</strong> list (<code>&lt;ul&gt;</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically related to a list, e.g. as a "list header".</p>
+		<ul>
+			<li>One.</li>
+			<li>Two.</li>
+			<li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+			<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+		</ul>
+		
+
+		<h3>Unordered lists</h3>
+		<p>Here's another one</p>
+		<ul>
+			<li>One.</li>
+			<li>Two.</li>
+			<li>This is a nested <code>&lt;ul&gt;</code> list:
+				<ul>
+					<li>One.</li>
+					<li>Two.</li>
+					<li>This is a nested <code>&lt;ul&gt;</code> list:
+						<ul>
+							<li>One.</li>
+							<li>Two.</li>
+							<li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+							<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+						</ul>
+					</li>
+					<li>Four</li>
+				</ul>
+			</li>
+			<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+		</ul>
+		
+
+		<h3>Ordered lists with nested lists</h3>
+		<p>This is a paragraph before a <strong>numbered</strong> list (<code>&lt;ol&gt;</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically related to a list, e.g. as a "list header".</p>
+		<ol>
+			<li>One.</li>
+			<li>Two.</li>
+			<li>Below is a nested <code>&lt;ol&gt;</code> list set to display capital letters rather than numbers:
+				<ol type="A">
+					<li>One.</li>
+					<li>Two.</li>
+					<li>Three. Well, probably this list item should be longer. Note that if items are short, lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+					<li>This nested <code>&lt;ol&gt;</code> is set to show Roman numerals.
+						<ol type="i">
+							<li>One.</li>
+							<li>Two.</li>
+							<li>Three. Well, probably this list item should be longer. Note that if items are short, lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+							<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+		</ol>
+		
+
+		<h3>Definition lists</h3>
+		<p>This is a paragraph before a <strong>Definition</strong> list (<code>&lt;dl&gt;</code>). In principle, such a list should consist of <em>terms</em> and associated definitions. But many authors use <code>&lt;dl&gt;</code> elements for fancy "layout" things. Usually the effect is not <em>too</em> bad, if you design user style sheet rules for <code>&lt;dl&gt;</code> which are suitable for real definition lists. </p>
+		<dl>
+			<dt>This is the <code>&lt;dt&gt;</code> element</dt>
+			<dd>This is the <code>&lt;dd&gt;</code> element</dd>
+			<dt>recursion, indirect</dt>
+			<dd>see indirect recursion</dd>
+			<dt>indirect recursion</dt>
+			<dd>see recursion, indirect</dd>
+			<dt>term</dt>
+			<dd>a word or other expression taken into specific use in a well-defined meaning, which is often defined rather rigorously, even formally, and may differ quite a lot from an everyday meaning</dd>
+		</dl>
+		<hr>
+		
+
+
+
+		<h2>Forms</h2>
+		<form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+			<p>This is a form (<code>&lt;form&gt;</code>) containing various fields (with some initial values (defaults) set, so that you can see how input text looks like without actually typing it).</p>
+			<p>Below is a hidden field</p>
+			<input type="hidden" name="hidden field" value="42">
+			<label for="but">Button (<code>&lt;button&gt;</code>) followed by a <code>&lt;br&gt;</code> tag, all wrapped in a <code>&lt;label&gt;</code> tag:
+				<button id="but" type="submit" name="foo" value="bar">A cool button</button>
+			</label>
+			<br>
+			<label for="f0">Reset button:
+				<input id="f0" type="reset" name="reset" value="Reset">
+			</label>
+			<div>
+				<p>This field and label are inside a <code>&lt;div&gt;</code></p>
+				<label for="f1">Single-line text input field (<code>&lt;input&gt;</code>):
+					<input id="f1" name="text" size="20" value="Default text">
+				</label>
+			</div>
+			<label for="f2">Multi-line text input field (<code>&lt;textarea&gt;</code>):</label>
+			<br>
+			<textarea id="f2" name="textarea" rows="2" cols="20"> Default text.
+			</textarea>
+			<p>The following two radio buttons are inside a <code>&lt;fieldset&gt;</code> element with a <code>&lt;legend&gt;</code>:</p>
+			<fieldset>
+				<legend>Legend</legend>
+				<div>
+					<label for="f3">
+						<input id="f3" type="radio" name="radio" value="1"> Radio button 1</label>
+				</div>
+				<div>
+					<label for="f4">
+						<input id="f4" type="radio" name="radio" value="2" checked=""> Radio button 2 (initially checked)</label>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Check those that apply</legend>
+				<div>
+					<label for="f5">
+						<input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label>
+				</div>
+				<div>
+					<label for="f6">
+						<input id="f6" type="checkbox" name="checkbox2" checked=""> Checkbox 2 (initially checked)</label>
+				</div>
+			</fieldset>
+			<div>
+				<label for="f10">A <code>&lt;select&gt;</code> element with the <code>size</code> attribute set (dropdown box):
+					<select id="f10" name="select1" size="1">
+						<option>one </option>
+						<option selected="">two (default) </option>
+						<option>three </option>
+					</select>
+				</label>
+			</div>
+			<div>
+				<label for="f11">A <code>&lt;select&gt;</code> element with <code>&lt;optgroup&gt;</code> grouping the <code>&lt;option&gt;</code>s (dropdown box):
+					<select id="f11" name="select1" size="1">
+						<optgroup label="Option group 1">
+							<option>one</option>
+							<option selected="">two (default) </option>
+							<option>three </option>
+						</optgroup>
+						<optgroup label="Option group 2">
+							<option>one</option>
+							<option>two</option>
+							<option>three </option>
+						</optgroup>
+					</select>
+				</label>
+			</div>
+			<div>
+				<label for="f12">A <code>&lt;select&gt;</code> element with the <code>size</code> attribute set (listbox): </label>
+				<br>
+				<select id="f12" name="select2" size="3">
+					<option>one</option>
+					<option selected="">two (default)</option>
+					<option>three</option>
+				</select>
+			</div>
+			<div>
+				<label for="f99">Submit button (as <code>&lt;input&gt;</code>, not <code>&lt;button&gt;</code>):
+					<input id="f99" type="submit" name="submit" value="Just a test">
+				</label>
+			</div>
+			<div>
+				<p>Below is a <code>&lt;meter&gt;</code> showing a value in relation to a given range. In this case, 84 is the value, the range is 64-100, and 80 is considered high</p>
+				<p>He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.</p>
+				<p>Below is a <code>&lt;meter&gt;</code> showing a value in relation to a given range. In this case, 75 is the value, the range is 64-100, and 80 is considered high</p>
+				<p>He got a <meter low="69" high="80" max="100" value="75">B</meter> on the exam.</p>
+				<p>Below is a <code>&lt;meter&gt;</code> showing a value in relation to a given range. In this case, 50 is the value, the range is 64-100, and 80 is considered high</p>
+				<p>He got a <meter low="69" high="80" max="100" value="50">B</meter> on the exam.</p>
+				<p>Below is a <code>&lt;meter&gt;</code> showing a value in relation to a given range. In this case, 15 is the value, the range is 64-100, and 80 is considered high</p>
+				<p>He got a <meter low="69" high="80" max="100" value="15">B</meter> on the exam.</p>
+			</div>
+			<div>
+				<p>Below is a <code>&lt;datalist&gt;</code> tag, which allows you to define <code>&lt;option&gt;</code>s for a list. In this case, a text input field is referencing a datalist containing browser names</p>
+				<label>Choose a browser from this list:
+					<input list="browsers" name="myBrowser" />
+				</label>
+				<datalist id="browsers">
+					<option value="Chrome"></option>
+					<option value="Firefox"></option>
+					<option value="Internet Explorer"></option>
+					<option value="Opera"></option>
+					<option value="Safari"></option>
+					<option value="Microsoft Edge"></option>
+				</datalist>
+			</div>
+		</form>
+		<hr>
+		
+
+
+
+		<h2>Tables</h2>
+		<p>The following <code>&lt;table&gt;</code> has a <code>&lt;caption&gt;</code>. The first row (<code>&lt;tr&gt;</code>) and the first column contain table header cells (<code>&lt;th&gt;</code>) only; other cells are data cells (<code>&lt;td&gt;</code> elements)</p>
+		<table>
+			<caption>Sample table: Areas of the Nordic countries, in sq km</caption>
+			<tbody>
+				<tr>
+					<th scope="col">Country</th>
+					<th scope="col">Total area</th>
+					<th scope="col">Land area</th>
+				</tr>
+				<tr>
+					<th>Denmark</th>
+					<td>43,070</td>
+					<td>42,370</td>
+				</tr>
+				<tr>
+					<th>Finland</th>
+					<td>337,030</td>
+					<td>305,470</td>
+				</tr>
+				<tr>
+					<th>Iceland</th>
+					<td>103,000</td>
+					<td>100,250</td>
+				</tr>
+				<tr>
+					<th>Norway</th>
+					<td>324,220</td>
+					<td>307,860</td>
+				</tr>
+				<tr>
+					<th>Sweden</th>
+					<td>449,964</td>
+					<td>410,928</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>The following table uses all <code>&lt;table&gt;</code> elements, including <code>header</code> attributes that let you define which <code>&lt;th&gt;</code>s relate to which <code>&lt;td&gt;</code>s when there are multiple <code>&lt;th&gt;</code> levels</p>
+		<table>
+			<caption>This is the table's caption</caption>
+			<thead>
+				<tr>
+					<th scope="col" id="hcg1" colspan="3">Header column Group 1</th>
+					<th scope="col" id="hcg2" colspan="2">Header column Group 2</th>
+				</tr>
+				<tr>
+					<th scope="col" id="hcg1-1">Country</th>
+					<th scope="col" id="hcg1-2">Total area</th>
+					<th scope="col" id="hcg1-3">Land area</th>
+					<th scope="col" id="hcg2-1">More area</th>
+					<th scope="col" id="hcg2-2">Final area</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td headers="hcg1 hcg1-1">Denmark</td>
+					<td headers="hcg1 hcg1-2">43,070</td>
+					<td colspan="3" headers="hcg1 hcg1-3">This cell uses <code>colspan</code> to span 3 columns</td>
+				</tr>
+				<tr>
+					<td headers="hcg1 hcg1-1">Finland</td>
+					<td headers="hcg1 hcg1-2">337,030</td>
+					<td headers="hcg1 hcg1-3">305,470</td>
+					<td headers="hcg2 hcg2-1">42,370</td>
+					<td headers="hcg2 hcg2-2">42,370</td>
+				</tr>
+				<tr>
+					<td headers="hcg1 hcg1-1">Iceland</td>
+					<td headers="hcg1 hcg1-2">103,000</td>
+					<td rowspan="2" headers="hcg1 hcg1-3">This cell uses <code>rowspan</code> to span 2 rows</td>
+					<td headers="hcg2 hcg2-1">42,370</td>
+					<td headers="hcg2 hcg2-2">42,370</td>
+				</tr>
+				<tr>
+					<td headers="hcg1 hcg1-1">Norway</td>
+					<td headers="hcg1 hcg1-2">324,220</td>
+					<td headers="hcg2 hcg2-1">307,860</td>
+					<td headers="hcg2 hcg2-2">307,860</td>
+				</tr>
+				<tr>
+					<td headers="hcg1 hcg1-1">Sweden</td>
+					<td headers="hcg1 hcg1-2">449,964</td>
+					<td headers="hcg1 hcg1-3">410,928</td>
+					<td headers="hcg2 hcg2-1">42,370</td>
+					<td headers="hcg2 hcg2-2">42,370</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td headers="hcg1 hcg1-1">this group of cells is wrapped in a <code>&lt;tfoot&gt;</code> tag</td>
+					<td headers="hcg1 hcg1-2">Total of column 1</td>
+					<td headers="hcg1 hcg1-3">Total of column 2</td>
+					<td headers="hcg2 hcg2-1">Total of column 2</td>
+					<td headers="hcg2 hcg2-2">Total of column 2</td>
+				</tr>
+			</tfoot>
+		</table>
+		<hr>
+		
+
+
+
+		<h2>Figures</h2>
+		<p>A <code>&lt;figure&gt;</code> on its own</p>
+		<figure>
+			<img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
+		</figure>
+		<p>A <code>&lt;figure&gt;</code> with <code>&lt;figcaption&gt;</code></p>
+		<figure>
+			<img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
+			<figcaption>Fig1. MDN Logo</figcaption>
+		</figure>
+		<hr>
+		
+
+
+
+		<h2>Character test</h2>
+		<p>The following <code>&lt;table&gt;</code> has some sample characters with annotations. If the browser’s default font does not contain all of them, they may get displayed using backup fonts. This may cause stylistic differences, but it should not prevent the characters from being displayed at all.</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Char.</th>
+					<th>Explanation</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&ecirc;</td>
+					<td>e with circumflex</td>
+					<td>Latin 1 character, should be ok</td>
+				</tr>
+				<tr>
+					<td>&mdash;</td>
+					<td>em dash</td>
+					<td>Windows Latin 1 character, should be ok, too</td>
+				</tr>
+				<tr>
+					<td>&Amacr;</td>
+					<td>A with macron (line above)</td>
+					<td>Latin Extended-A character, not present in all fonts</td>
+				</tr>
+				<tr>
+					<td>&Omega;</td>
+					<td>capital omega</td>
+					<td>A Greek letter</td>
+				</tr>
+				<tr>
+					<td>&minus;</td>
+					<td>minus sign</td>
+					<td>Unicode minus</td>
+				</tr>
+				<tr>
+					<td>&#216;</td>
+					<td>diameter sign</td>
+					<td>relatively rare in fonts</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		
+
+
+
+		<h2>Hyphenation</h2>
+		<p>Resize you browser window to trigger some hyphenation in the text below, depending on support to various methods of hyphenation.</p>
+		
+
+		<h3>CSS-based hyphenation</h3>
+		<p class="limited hyphens">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors. </p>
+		
+
+		<h3>JavaScript-driven hyphenation</h3>
+		<p class="limited hyphenate">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors. </p>
+		
+
+		<h3>Explicit hyphenation hints (soft hyphens)</h3>
+		<p class="limited">Un&shy;til re&shy;cent&shy;ly the great ma&shy;jor&shy;i&shy;ty of nat&shy;u&shy;ral&shy;ists be&shy;lieved that spe&shy;cies were im&shy;mu&shy;ta&shy;ble pro&shy;duc&shy;tions, and had been sep&shy;a&shy;rate&shy;ly cre&shy;at&shy;ed. This view has been ably main&shy;tain&shy;ed by many au&shy;thors. </p>
+		<hr>
+		
+
+
+
+		<h2>Multimedia</h2>
+		
+
+		<h3>Images</h3>
+		<p>Below is a test <code>&lt;img&gt;</code> inside a <code>&lt;p&gt;</code> tag:</p>
+		<p><img src="http://lh3.googleusercontent.com/FGUReKv4ABK_Df1HH4RGhtkFXQgrg8SV9HhjlTpOUWXOdFl-gqUyITUg2SLWXjoaur7Vd3FWNMu0nCx8nzk59xKiULIZKm2LJjgvpbTs" alt="A test image from Google" width="500" height="228"></p>
+		<p>Below is a broken <code>&lt;image&gt;</code> inside a <code>&lt;p&gt;</code> tag:</p>
+		<p><img src="/nopath" alt="This image's path is deliberately broken"></p>
+		
+
+		<h3>Audio</h3>
+		<p>Below is an <code>&lt;audio&gt;</code> tag</p>
+		<audio src="/media/audio.oga" loop controls></audio>
+		<p>Below is a <code>&lt;map&gt;</code> tag, containing <code>&lt;area&gt;</code> tags to define locations. Hover over the image to see the destination path change</p>
+		<map name="primary">
+			<area shape="circle" coords="75,75,75" href="left.html" alt="left alt text">
+			<area shape="circle" coords="275,75,75" href="right.html" alt="right alt text">
+		</map>
+		<img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic">
+		<p>Below is an <code>&lt;audio&gt;</code> tag with Legacy support. It contains <code>&lt;source&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;p&gt;</code> and <code>&lt;a&gt;</code> tags</p>
+		<audio loop controls>
+			<source src="/media/audio.oga">
+			<source src="/media/audio.wav">
+			<object type="audio/x-wav" data="/media/audio.wav" width="290" height="45">
+				<param name="src" value="/media/audio.wav">
+				<param name="autoplay" value="false">
+				<param name="autoStart" value="0">
+				<p><a href="/media/audio.wav">Download this audio file.</a></p>
+			</object>
+		</audio>
+		<p>Below is a <code>&lt;video&gt;</code> tag</p>
+		<video src="video/play.mp4" loop controls poster="/images/video.png"></video>
+		<p>Below is a <code>&lt;video&gt;</code> tag with Legacy support. It contains <code>&lt;source&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;p&gt;</code> and <code>&lt;a&gt;</code> tags</p>
+		<video loop controls>
+			<source src="/media/video.oga">
+			<source src="/media/video.m4v">
+			<object type="video/ogg" data="/media/video.oga" width="320" height="240">
+				<param name="src" value="/media/video.oga">
+				<param name="autoplay" value="false">
+				<param name="autoStart" value="0">
+				<p><a href="/media/video.oga">Download this video file.</a></p>
+			</object>
+		</video>
+		<hr>
+		
+
+
+
+		<h2>Scripting</h2>
+		<p>Below is a <code>&lt;noscript&gt;</code> tag, which will only display if your browser either doesn't support the script type, or has scripts disabled</p>
+		<noscript>
+			<p>If you can see this, scripts are disabled!</p>
+		</noscript>
+		
+
+		<h3>Canvas</h3>
+		<p>Below is a <code>&lt;canvas&gt;</code> tag containing alternative text</p>
+		<canvas id="canvas" width="300" height="300">
+			An alternative text describing what your canvas displays.
+		</canvas>
+		<hr>
+		
+
+
+
+		<h2>Interactive elements</h2>
+		<p>Below is a <code>&lt;details&gt;</code> tag containing a <code>&lt;summary&gt;</code></p>
+		<details>
+			<summary>Some details</summary>
+			<p>More info about the details.</p>
+		</details>
+		<p>Below is an open <code>&lt;details&gt;</code> tag containing a <code>&lt;summary&gt;</code></p>
+		<details open>
+			<summary>Even more details</summary>
+			<p>Here are even more details about the details.</p>
+		</details>
+		<p>Below is a <code>&lt;dialog&gt;</code> tag containing a <code>&lt;p&gt;</code> tag</p>
+		<dialog open>
+			<p>Greetings, one and all!</p>
+		</dialog>
+	</main>
+	<hr>
+	<p id="reference"><small>This page's Source code is <a href="https://validator.w3.org">Valid HTML</a> as of <time datetime="2017-09-04T00:00">4 September 2017</time>.<br>
+	Additional code added to the DOM by scripts may not be valid.<br>
+	Date of creation: <time datetime="2000-09-15T00:00">15 September 2000</time>.<br>
+	Last update: <time datetime="2017-09-04T00:00">4 September 2017</time>.</small></p>
+	<br>
+	<script type="text/javascript">
+	$('aside').after('<h2 id="navigation">Topics</h2>\n<nav id="nav-menu"><ul></ul></nav>\n<hr><br><br>');
+
+	// Get list of all 		<h2>s
+	$('h2:not(#navigation)').each(function() {
+		var $this = $(this),
+			$text = $this.text();
+
+		// Add IDs to all H2s based on text within
+		$this.attr('id', function() {
+			return $text.replace(/\ +/g, '-').toLowerCase();
+		});
+
+		// Reassemble into menu
+		$('#nav-menu ul').append('<li><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
+	});
+
+	$('nav').first().after('<h2 id="elements">HTML elements referenced on this page</h2>\n<p>Click an element to view the first unique instance of it on this page</p>\n<nav><ul id="elements-nav"></ul></nav>');
+
+
+	var elements = [];
+
+	// Get list of all HTML elements
+	// Target all <code> usage EXCEPT where it's been used to demonstrate the <code> tag itself
+	$('code:contains("<"):not(:contains("[")):not(:contains("This is sample text inside code markup"))').each(function() {
+		var $this = $(this),
+			$text = $this.text().replace('&lt;', '').replace('&gt;', '').replace('<', '').replace('>', ''),
+			$origID = $text,
+			$id = $text,
+			count = 0;
+
+		// If another element already has this ID, append a number, then recheck for that ID until it is unique
+		while ($('#' + $id).length) {
+			count++
+			$id = $id + count;
+		}
+
+		// Apply IDs to each element
+		$this.attr('id', $id.replace(/\ +/g, '-').toLowerCase());
+
+		// Populate the array with the original ID for our fragment links later
+		elements.push($origID);
+
+		// Auto-generate links to MDN page
+		$this.wrap('<a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/' + $origID + '"></a>');
+	});
+
+	// Strip duplicate items and sort alphabetically
+	elements = $.unique(elements).sort();
+
+	// For each link, generate 
+	for (var i = 0; i < elements.length; i++) {
+		$('#elements-nav').append('<li><a href="#' + elements[i] + '">' + elements[i] + '</a></li>');
+	}
+
+	// Make all these nav elements toggle-able
+	$('#nav').before('<form id="controls">\n<label for="sections">Show Sections</label>\n<input id="sections" name="sections" type="checkbox"><br>\n<label for="tags">Show Tags</label>\n<input id="tags" name="tags" type="checkbox">\n</form>');
+
+	// TODO: Add toggle visibility options for Nav aids
+
+	/* 
+	   $('#controls #sections').on('click', function() {
+
+		});
+		$('#controls #tags').on('click', function() {
+
+		});
+	   */
+	</script>
 </body>
+
 </html>

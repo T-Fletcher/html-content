@@ -597,16 +597,16 @@
 
 	// Get list of all 		<h2>s
 	jQuery('h2:not(#navigation)').each(function() {
-		var jQuerythis = jQuery(this),
-			jQuerytext = jQuerythis.text();
+		var $this = jQuery(this),
+			$text = $this.text();
 
 		// Add IDs to all H2s based on text within
-		jQuerythis.attr('id', function() {
-			return jQuerytext.replace(/\ +/g, '-').toLowerCase();
+		$this.attr('id', function() {
+			return $text.replace(/\ +/g, '-').toLowerCase();
 		});
 
 		// Reassemble into menu
-		jQuery('#nav-menu ul').append('<li><a href="#' + jQuerythis.attr('id') + '">' + jQuerytext + '</a></li>');
+		jQuery('#nav-menu ul').append('<li><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
 	});
 
 	jQuery('nav').first().after('<h2 id="elements">HTML elements referenced on this page</h2>\n<div id="elements-nav-wrap"><p>Click an element to view the first unique instance of it on this page</p>\n<nav><ul id="elements-nav-list"></ul></nav></div>');
@@ -617,30 +617,30 @@
 	// Get list of all HTML elements
 	// Target all <code> usage EXCEPT where it's been used to demonstrate the <code> tag itself
 	jQuery('code:contains("<"):not(:contains("[")):not(:contains("This is sample text inside code markup"))').each(function() {
-		var jQuerythis = jQuery(this),
-			jQuerytext = jQuerythis.text().replace('&lt;', '').replace('&gt;', '').replace('<', '').replace('>', ''),
-			jQueryorigID = jQuerytext,
-			jQueryid = jQuerytext,
+		var $this = jQuery(this),
+			$text = $this.text().replace('&lt;', '').replace('&gt;', '').replace('<', '').replace('>', ''),
+			$origID = $text,
+			$id = $text,
 			count = 0;
 
 		// If another element already has this ID, append a number, then recheck for that ID until it is unique
-		while (jQuery('#' + jQueryid).length) {
+		while (jQuery('#' + $id).length) {
 			count++
-			jQueryid = jQueryid + count;
+			$id = $id + count;
 		}
 
 		// Apply IDs to each element
-		jQuerythis.attr('id', jQueryid.replace(/\ +/g, '-').toLowerCase());
+		$this.attr('id', $id.replace(/\ +/g, '-').toLowerCase());
 
 		// Populate the array with the original ID for our fragment links later
-		elements.push(jQueryorigID);
+		elements.push($origID);
 
 		// Auto-generate links to MDN page
-		jQuerythis.wrap('<a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/' + jQueryorigID + '"></a>');
+		$this.wrap('<a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/' + $origID + '"></a>');
 	});
 
 	// Strip duplicate items and sort alphabetically
-	elements = jQuery.unique(elements).sort();
+	elements = $.unique(elements).sort();
 
 	// For each element, generate a link
 	for (var i = 0; i < elements.length; i++) {
